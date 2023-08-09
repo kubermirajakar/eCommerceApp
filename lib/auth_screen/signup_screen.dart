@@ -15,6 +15,8 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  bool? isCheck = false;
+
   @override
   Widget build(BuildContext context) {
     return bgWidget(
@@ -57,9 +59,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Row(
                   children: [
                     Checkbox(
-                      value: false,
-                      onChanged: (newValue) {},
-                      checkColor: redColor,
+                      activeColor: redColor,
+                      value: isCheck,
+                      onChanged: (newValue) {
+                        setState(() {
+                          isCheck = newValue;
+                        });
+                      },
+                      checkColor: whiteColor,
                     ),
                     5.widthBox,
                     Expanded(
@@ -102,7 +109,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 10.heightBox,
                 commonButton(
-                        color: redColor,
+                        color: isCheck == true ? redColor : lightGrey,
                         onPress: () {},
                         textColor: whiteColor,
                         title: signUp)
@@ -110,28 +117,37 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     .width(context.screenWidth - 50)
                     .make(),
                 10.heightBox,
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: alreadyHaveAccount,
-                        style: TextStyle(
-                          fontFamily: bold,
-                          color: fontGrey,
-                        ),
-                      ),
-                      TextSpan(
-                        text: signIn,
-                        style: TextStyle(
-                          fontFamily: bold,
-                          color: redColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                ).onTap(() {
-                  Get.back();
-                })
+                // RichText(
+                //   text: TextSpan(
+                //     children: [
+                //       TextSpan(
+                //         text: alreadyHaveAccount,
+                //         style: TextStyle(
+                //           fontFamily: bold,
+                //           color: fontGrey,
+                //         ),
+                //       ),
+                //       TextSpan(
+                //         text: signIn,
+                //         style: TextStyle(
+                //           fontFamily: bold,
+                //           color: redColor,
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ).onTap(() {
+                //   Get.back();
+                // })
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    alreadyHaveAccount.text.color(fontGrey).make(),
+                    signIn.text.color(redColor).make().onTap(() {
+                      Get.back();
+                    })
+                  ],
+                )
               ],
             )
                 .box

@@ -1,6 +1,7 @@
 import 'package:ecommerceapp/auth_screen/signup_screen.dart';
 import 'package:ecommerceapp/consts/consts.dart';
 import 'package:ecommerceapp/consts/socialIconList.dart';
+import 'package:ecommerceapp/home_screen/home_screen.dart';
 import 'package:ecommerceapp/widgets_common/applogo_widget.dart';
 import 'package:ecommerceapp/widgets_common/background_widget.dart';
 import 'package:ecommerceapp/widgets_common/common_button.dart';
@@ -19,6 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return bgWidget(
         child: Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Center(
         child: Column(
           children: [
@@ -47,7 +49,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 5.heightBox,
                 commonButton(
                         color: redColor,
-                        onPress: () {},
+                        onPress: () {
+                          Get.to(() => HomeScreen());
+                        },
                         textColor: whiteColor,
                         title: signIn)
                     .box
