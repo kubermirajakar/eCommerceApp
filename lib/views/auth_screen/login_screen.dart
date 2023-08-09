@@ -1,7 +1,7 @@
-import 'package:ecommerceapp/auth_screen/signup_screen.dart';
 import 'package:ecommerceapp/consts/consts.dart';
 import 'package:ecommerceapp/consts/socialIconList.dart';
-import 'package:ecommerceapp/home_screen/home_screen.dart';
+import 'package:ecommerceapp/views/auth_screen/signup_screen.dart';
+import 'package:ecommerceapp/views/home_screen/home.dart';
 import 'package:ecommerceapp/widgets_common/applogo_widget.dart';
 import 'package:ecommerceapp/widgets_common/background_widget.dart';
 import 'package:ecommerceapp/widgets_common/common_button.dart';
@@ -50,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 commonButton(
                         color: redColor,
                         onPress: () {
-                          Get.to(() => HomeScreen());
+                          Get.to(() => Home());
                         },
                         textColor: whiteColor,
                         title: signIn)
