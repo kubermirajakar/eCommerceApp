@@ -1,5 +1,4 @@
 import 'package:ecommerceapp/consts/consts.dart';
-import 'package:ecommerceapp/consts/socialIconList.dart';
 import 'package:ecommerceapp/widgets_common/applogo_widget.dart';
 import 'package:ecommerceapp/widgets_common/background_widget.dart';
 import 'package:ecommerceapp/widgets_common/common_button.dart';
@@ -114,6 +113,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         title: signUp)
                     .box
                     .width(context.screenWidth - 50)
+                    .height(context.screenHeight * 0.06)
                     .make(),
                 10.heightBox,
                 // RichText(

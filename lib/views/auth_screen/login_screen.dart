@@ -1,5 +1,6 @@
+import 'package:ecommerceapp/consts/List.dart';
 import 'package:ecommerceapp/consts/consts.dart';
-import 'package:ecommerceapp/consts/socialIconList.dart';
+
 import 'package:ecommerceapp/views/auth_screen/signup_screen.dart';
 import 'package:ecommerceapp/views/home_screen/home.dart';
 import 'package:ecommerceapp/widgets_common/applogo_widget.dart';
@@ -18,6 +19,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
+    // print(context.screenHeight);
     return bgWidget(
         child: Scaffold(
       resizeToAvoidBottomInset: false,
@@ -48,27 +50,31 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 5.heightBox,
                 commonButton(
-                        color: redColor,
-                        onPress: () {
-                          Get.to(() => Home());
-                        },
-                        textColor: whiteColor,
-                        title: signIn)
+                  color: redColor,
+                  onPress: () {
+                    Get.to(() => Home());
+                  },
+                  textColor: whiteColor,
+                  title: signIn,
+                )
                     .box
                     .width(context.screenWidth - 50)
+                    .height(context.screenHeight * 0.06)
                     .make(),
                 10.heightBox,
                 createNewAccount.text.color(fontGrey).make(),
                 10.heightBox,
                 commonButton(
-                        color: lightGolden,
-                        onPress: () {
-                          Get.to(() => SignUpScreen());
-                        },
-                        textColor: redColor,
-                        title: signUp)
+                  color: lightGolden,
+                  onPress: () {
+                    Get.to(() => SignUpScreen());
+                  },
+                  textColor: redColor,
+                  title: signUp,
+                )
                     .box
                     .width(context.screenWidth - 50)
+                    .height(context.screenHeight * 0.06)
                     .make(),
                 10.heightBox,
                 loginWith.text.color(fontGrey).make(),

@@ -2,7 +2,7 @@ const appname = "eMart";
 const appversion = "Version 1.0.0";
 const credits = "@Kuber Mirajakar";
 const email = 'Email';
-const emailHint = "amin@admin.com";
+const emailHint = "Kuber@gmail.com";
 const password = 'Password';
 const passwordHint = '***********';
 const reTypePassword = "ReType Password";
@@ -17,7 +17,17 @@ const privacyPolicy = "Privacy Policy";
 const termsAndCondition = "Terms and Conditions";
 const alreadyHaveAccount = "Already have an account? ";
 
+//home strings
 const home = "Home",
     categories = "Categories",
     cart = "Cart",
     account = "Account";
+
+//home screen strings
+const searchAnything = "Search anything...",
+    todayDeal = "Today's Deal",
+    flashSale = "Flash Sale",
+    topSellers = "Top Sellers",
+    brand = "Brand",
+    topCategories = "Top Categories",
+    featuredCategories = "Featured Categories";
