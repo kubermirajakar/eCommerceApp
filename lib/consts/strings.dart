@@ -16,6 +16,7 @@ const loginWith = "Log in with";
 const privacyPolicy = "Privacy Policy";
 const termsAndCondition = "Terms and Conditions";
 const alreadyHaveAccount = "Already have an account? ";
+const logout = "Logout";
 
 //home strings
 const home = "Home",
@@ -48,3 +49,12 @@ const womenClothing = "Women Clothing",
     cellphone = "Cellphone & Tab",
     furniture = "Furniture",
     menClothingFashion = "Men Clothing & Fashion";
+
+const video = "Video",
+    reviews = "Reviews",
+    sellerPolicy = "Seller Policy",
+    returnPolicy = "Return Policy",
+    productsYouMayLike = "Products You May Like",
+    supportPolicy = "Support Policy";
+
+const wishlist = "My Wishlist", orders = "My Orders", messages = "Messages";

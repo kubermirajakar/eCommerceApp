@@ -1,6 +1,8 @@
 import 'package:ecommerceapp/consts/consts.dart';
 import 'package:ecommerceapp/views/auth_screen/login_screen.dart';
+import 'package:ecommerceapp/views/categories_screen/item_details.dart';
 import 'package:ecommerceapp/views/home_screen/home_screen.dart';
+import 'package:ecommerceapp/views/profile_screen/profile_screen.dart';
 import 'package:ecommerceapp/widgets_common/applogo_widget.dart';
 
 import 'package:get/get.dart';
@@ -20,7 +22,9 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
       () {
         Get.to(
-          () => const LoginScreen(),
+          // () => const ItemDetails(title: "hello"),
+          // () => const LoginScreen(),
+          () => ProfileScreen(),
         );
       },
     );
