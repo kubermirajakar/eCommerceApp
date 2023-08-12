@@ -1,13 +1,19 @@
 import 'package:ecommerceapp/consts/List.dart';
 import 'package:ecommerceapp/consts/consts.dart';
+import 'package:ecommerceapp/controller/auth_controller.dart';
+import 'package:ecommerceapp/controller/profile_controller.dart';
+import 'package:ecommerceapp/views/auth_screen/login_screen.dart';
 import 'package:ecommerceapp/views/profile_screen/components/profile_card.dart';
+import 'package:ecommerceapp/views/profile_screen/profile_edit_screen.dart';
 import 'package:ecommerceapp/widgets_common/background_widget.dart';
+import 'package:get/get.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var controller = Get.put(ProfileController());
     return bgWidget(
       child: Container(
         // padding: EdgeInsets.all(8),
@@ -23,7 +29,9 @@ class ProfileScreen extends StatelessWidget {
                       Icons.edit,
                       color: whiteColor,
                     ),
-                  ).onTap(() {}),
+                  ).onTap(() {
+                    Get.to(() => ProfileEditScreen());
+                  }),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -49,7 +57,11 @@ class ProfileScreen extends StatelessWidget {
                             color: whiteColor,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () async {
+                          await Get.put(AuthController())
+                              .signOutMethod(context);
+                          Get.offAll(() => LoginScreen());
+                        },
                         child: logout.text.bold.white.make(),
                       ),
                     ],
