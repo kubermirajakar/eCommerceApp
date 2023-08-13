@@ -9,16 +9,15 @@ void main() async {
   try {
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp(
-        options: FirebaseOptions(
-      apiKey: "AIzaSyApAPzK9BVe67444gsXzRNs4jlJEX5Sn4s",
-      appId:
-          "754983928283-kf6u7k8od65u0q47fv20lfcdjuibklbg.apps.googleusercontent.com",
-      messagingSenderId: "",
-      projectId: "ecommerceapp-a27db",
-    ));
-  } catch (e) {
-    print(e);
-  }
+      options: FirebaseOptions(
+        apiKey: "AIzaSyApAPzK9BVe67444gsXzRNs4jlJEX5Sn4s",
+        appId:
+            "754983928283-kf6u7k8od65u0q47fv20lfcdjuibklbg.apps.googleusercontent.com",
+        messagingSenderId: "",
+        projectId: "ecommerceapp-a27db",
+      ),
+    );
+  } catch (e) {}
   // WidgetsFlutterBinding.ensureInitialized();
   // await Firebase.initializeApp(
   //     options: FirebaseOptions(
