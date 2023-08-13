@@ -14,8 +14,8 @@ Widget featuredButton({String? title, icon}) {
   )
       .box
       .width(180)
-      .padding(EdgeInsets.all(4))
-      .margin(EdgeInsets.symmetric(horizontal: 4))
+      .padding(const EdgeInsets.all(4))
+      .margin(const EdgeInsets.symmetric(horizontal: 4))
       .roundedSM
       .outerShadowSm
       .color(whiteColor)

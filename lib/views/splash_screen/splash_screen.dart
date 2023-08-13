@@ -19,13 +19,13 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   changeScreen() {
     Future.delayed(
-      Duration(
+      const Duration(
         seconds: 1,
       ),
       () {
         auth.authStateChanges().listen((User? currentUser) {
           if (currentUser == null && mounted) {
-            Get.to(() => LoginScreen());
+            Get.to(() => const LoginScreen());
           } else {
             Get.to(() => Home());
           }
@@ -57,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen> {
             appname.text.bold.white.fontFamily(bold).size(22).make(),
             5.heightBox,
             appversion.text.white.make(),
-            Spacer(),
+            const Spacer(),
             credits.text.white.fontFamily(semibold).make(),
             30.heightBox,
           ],

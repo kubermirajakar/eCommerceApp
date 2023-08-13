@@ -16,11 +16,11 @@ class ItemDetails extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.share),
+              icon: const Icon(Icons.share),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.favorite_outline,
               ),
             ),
@@ -30,7 +30,7 @@ class ItemDetails extends StatelessWidget {
           children: [
             Expanded(
               child: Padding(
-                padding: EdgeInsets.all(
+                padding: const EdgeInsets.all(
                   8,
                 ),
                 child: SingleChildScrollView(
@@ -51,7 +51,7 @@ class ItemDetails extends StatelessWidget {
                         },
                       ),
                       10.heightBox,
-                      title!.text
+                      title.text
                           .color(darkFontGrey)
                           .fontFamily(semibold)
                           .size(16)
@@ -95,7 +95,7 @@ class ItemDetails extends StatelessWidget {
                               ],
                             ),
                           ),
-                          CircleAvatar(
+                          const CircleAvatar(
                             backgroundColor: whiteColor,
                             child: Icon(
                               Icons.message_rounded,
@@ -105,7 +105,7 @@ class ItemDetails extends StatelessWidget {
                         ],
                       )
                           .box
-                          .padding(EdgeInsets.symmetric(horizontal: 16))
+                          .padding(const EdgeInsets.symmetric(horizontal: 16))
                           .height(60)
                           .color(textfieldGrey)
                           .make(),
@@ -129,13 +129,13 @@ class ItemDetails extends StatelessWidget {
                                       .size(40, 40)
                                       .roundedFull
                                       .color(Vx.randomPrimaryColor)
-                                      .margin(
-                                          EdgeInsets.symmetric(horizontal: 4))
+                                      .margin(const EdgeInsets.symmetric(
+                                          horizontal: 4))
                                       .make(),
                                 ),
                               )
                             ],
-                          ).box.padding(EdgeInsets.all(8)).make(),
+                          ).box.padding(const EdgeInsets.all(8)).make(),
                           Row(
                             children: [
                               SizedBox(
@@ -150,7 +150,7 @@ class ItemDetails extends StatelessWidget {
                                 children: [
                                   IconButton(
                                       onPressed: () {},
-                                      icon: Icon(Icons.remove)),
+                                      icon: const Icon(Icons.remove)),
                                   "0"
                                       .text
                                       .bold
@@ -159,7 +159,7 @@ class ItemDetails extends StatelessWidget {
                                       .make(),
                                   IconButton(
                                     onPressed: () {},
-                                    icon: Icon(Icons.add),
+                                    icon: const Icon(Icons.add),
                                   ),
                                   10.widthBox,
                                   "0 Available"
@@ -169,7 +169,7 @@ class ItemDetails extends StatelessWidget {
                                 ],
                               ),
                             ],
-                          ).box.padding(EdgeInsets.all(8)).make(),
+                          ).box.padding(const EdgeInsets.all(8)).make(),
                           Row(
                             children: [
                               SizedBox(
@@ -187,7 +187,7 @@ class ItemDetails extends StatelessWidget {
                                   .size(18)
                                   .make(),
                             ],
-                          ).box.padding(EdgeInsets.all(8)).make(),
+                          ).box.padding(const EdgeInsets.all(8)).make(),
                         ],
                       ).box.white.shadowSm.make(),
                       20.heightBox,
@@ -203,7 +203,7 @@ class ItemDetails extends StatelessWidget {
                           .make(),
                       20.heightBox,
                       ListView(
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         children: List.generate(
                             itemDetailsButtonList.length,
@@ -212,12 +212,13 @@ class ItemDetails extends StatelessWidget {
                                       .text
                                       .fontFamily(semibold)
                                       .make(),
-                                  trailing: Icon(Icons.arrow_forward),
+                                  trailing: const Icon(Icons.arrow_forward),
                                 )
                                     .box
                                     .white
                                     .roundedSM
-                                    .margin(EdgeInsets.symmetric(vertical: 4))
+                                    .margin(
+                                        const EdgeInsets.symmetric(vertical: 4))
                                     .make()),
                       ).box.color(textfieldGrey).make(),
                       10.heightBox,
@@ -257,8 +258,10 @@ class ItemDetails extends StatelessWidget {
                                 .box
                                 .roundedSM
                                 .color(whiteColor)
-                                .margin(EdgeInsets.symmetric(horizontal: 4))
-                                .padding(EdgeInsets.symmetric(horizontal: 8))
+                                .margin(
+                                    const EdgeInsets.symmetric(horizontal: 4))
+                                .padding(
+                                    const EdgeInsets.symmetric(horizontal: 8))
                                 .make(),
                           ),
                         ),

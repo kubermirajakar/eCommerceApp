@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       color: lightGrey,
       width: context.screenWidth,
       height: context.screenHeight,
@@ -25,16 +25,16 @@ class HomeScreen extends StatelessWidget {
                   // border: InputBorder.none,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       width: 0,
                       style: BorderStyle.none,
                     ),
                   ),
-                  suffixIcon: Icon(Icons.search),
+                  suffixIcon: const Icon(Icons.search),
                   filled: true,
                   fillColor: whiteColor,
                   hintText: searchAnything,
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                     color: textfieldGrey,
                   ),
                 ),
@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
             10.heightBox,
             Expanded(
               child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Column(
                   children: [
                     VxSwiper.builder(
@@ -59,7 +59,7 @@ class HomeScreen extends StatelessWidget {
                           .box
                           .rounded
                           .clip(Clip.antiAlias)
-                          .margin(EdgeInsets.symmetric(horizontal: 8))
+                          .margin(const EdgeInsets.symmetric(horizontal: 8))
                           .make(),
                     ),
                     10.heightBox,
@@ -89,7 +89,7 @@ class HomeScreen extends StatelessWidget {
                           .box
                           .rounded
                           .clip(Clip.antiAlias)
-                          .margin(EdgeInsets.symmetric(horizontal: 8))
+                          .margin(const EdgeInsets.symmetric(horizontal: 8))
                           .make(),
                     ),
                     10.heightBox,
@@ -184,9 +184,10 @@ class HomeScreen extends StatelessWidget {
                                     .box
                                     .roundedSM
                                     .color(whiteColor)
-                                    .margin(EdgeInsets.symmetric(horizontal: 4))
-                                    .padding(
-                                        EdgeInsets.symmetric(horizontal: 8))
+                                    .margin(const EdgeInsets.symmetric(
+                                        horizontal: 4))
+                                    .padding(const EdgeInsets.symmetric(
+                                        horizontal: 8))
                                     .make(),
                               ),
                             ),
@@ -196,7 +197,7 @@ class HomeScreen extends StatelessWidget {
                     )
                         .box
                         .color(redColor)
-                        .padding(EdgeInsets.all(15))
+                        .padding(const EdgeInsets.all(15))
                         .width(double.infinity)
                         .make(),
                     20.heightBox,
@@ -213,15 +214,16 @@ class HomeScreen extends StatelessWidget {
                           .box
                           .rounded
                           .clip(Clip.antiAlias)
-                          .margin(EdgeInsets.symmetric(horizontal: 8))
+                          .margin(const EdgeInsets.symmetric(horizontal: 8))
                           .make(),
                     ),
                     20.heightBox,
                     GridView.builder(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       itemCount: 6,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         crossAxisSpacing: 8,
                         mainAxisSpacing: 8,
@@ -236,7 +238,7 @@ class HomeScreen extends StatelessWidget {
                               width: 200,
                               fit: BoxFit.fill,
                             ),
-                            Spacer(),
+                            const Spacer(),
                             "Laptop 4GB/64GB"
                                 .text
                                 .color(darkFontGrey)
@@ -254,8 +256,8 @@ class HomeScreen extends StatelessWidget {
                             .box
                             .roundedSM
                             .color(whiteColor)
-                            .margin(EdgeInsets.symmetric(horizontal: 4))
-                            .padding(EdgeInsets.all(10))
+                            .margin(const EdgeInsets.symmetric(horizontal: 4))
+                            .padding(const EdgeInsets.all(10))
                             .make();
                       },
                     ),

@@ -8,7 +8,7 @@ Widget commonButton({
 }) {
   return ElevatedButton(
     style: ElevatedButton.styleFrom(
-      primary: color,
+      backgroundColor: color,
     ),
     onPressed: onPress,
     child: title!.text.color(textColor).fontFamily(bold).make(),

@@ -2,7 +2,7 @@ import 'package:ecommerceapp/consts/consts.dart';
 
 Widget bgWidget({Widget? child}) {
   return Container(
-    decoration: BoxDecoration(
+    decoration: const BoxDecoration(
       image: DecorationImage(
         image: AssetImage(
           imgBackground,

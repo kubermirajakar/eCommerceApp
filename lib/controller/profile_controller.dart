@@ -13,7 +13,6 @@ class ProfileController extends GetxController {
       // print(img!.path);
       if (img == null) return;
       profileImgPath.value = img.path;
-      print(profileImgPath.value);
     } on PlatformException catch (e) {
       VxToast.show(context, msg: e.toString());
     }

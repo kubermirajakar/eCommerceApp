@@ -41,10 +41,10 @@ class Home extends StatelessWidget {
     ];
 
     var navBody = [
-      HomeScreen(),
-      CategoriesScreen(),
-      CartScreen(),
-      ProfileScreen()
+      const HomeScreen(),
+      const CategoriesScreen(),
+      const CartScreen(),
+      const ProfileScreen()
     ];
     return Scaffold(
       body: Column(
@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
         () => BottomNavigationBar(
           currentIndex: controller.currentNavIndex.value,
           selectedItemColor: redColor,
-          selectedLabelStyle: TextStyle(
+          selectedLabelStyle: const TextStyle(
             fontFamily: semibold,
           ),
           type: BottomNavigationBarType.fixed,

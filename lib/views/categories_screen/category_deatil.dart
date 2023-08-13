@@ -17,11 +17,11 @@ class CategoryDetail extends StatelessWidget {
         title: title.text.white.fontFamily(bold).make(),
       ),
       body: Container(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: Column(
           children: [
             SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: List.generate(
@@ -34,7 +34,7 @@ class CategoryDetail extends StatelessWidget {
                         .makeCentered()
                         .box
                         .roundedSM
-                        .margin(EdgeInsets.symmetric(horizontal: 4))
+                        .margin(const EdgeInsets.symmetric(horizontal: 4))
                         .white
                         .size(120, 60)
                         .make()),
@@ -44,8 +44,8 @@ class CategoryDetail extends StatelessWidget {
             Expanded(
               child: GridView.builder(
                 itemCount: 6,
-                physics: BouncingScrollPhysics(),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                physics: const BouncingScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 8,
                   mainAxisSpacing: 8,
@@ -79,13 +79,13 @@ class CategoryDetail extends StatelessWidget {
                       .roundedSM
                       .color(whiteColor)
                       .outerShadowSm
-                      .margin(EdgeInsets.symmetric(horizontal: 4))
-                      .padding(EdgeInsets.symmetric(horizontal: 8))
+                      .margin(const EdgeInsets.symmetric(horizontal: 4))
+                      .padding(const EdgeInsets.symmetric(horizontal: 8))
                       .make()
                       .onTap(
                     () {
                       Get.to(
-                        () => ItemDetails(
+                        () => const ItemDetails(
                           title: "Laptop 4GB/64GB",
                         ),
                       );

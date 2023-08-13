@@ -1,5 +1,4 @@
 import 'package:ecommerceapp/consts/consts.dart';
-import 'package:ecommerceapp/consts/images.dart';
 
 const socialIconList = [
   icFacebookLogo,

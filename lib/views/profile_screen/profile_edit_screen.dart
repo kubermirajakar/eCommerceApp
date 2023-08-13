@@ -15,6 +15,7 @@ class ProfileEditScreen extends StatelessWidget {
 
     return bgWidget(
       child: Scaffold(
+        appBar: AppBar(iconTheme: const IconThemeData(color: whiteColor)),
         body: Center(
           child: Obx(
             () => Column(
@@ -69,8 +70,8 @@ class ProfileEditScreen extends StatelessWidget {
                 .white
                 .rounded
                 .shadow
-                .padding(EdgeInsets.all(16))
-                .margin(EdgeInsets.all(10))
+                .padding(const EdgeInsets.all(16))
+                .margin(const EdgeInsets.all(10))
                 .make(),
           ),
         ),

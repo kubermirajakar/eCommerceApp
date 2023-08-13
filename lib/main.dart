@@ -1,15 +1,13 @@
 import 'package:ecommerceapp/consts/consts.dart';
 import 'package:ecommerceapp/views/splash_screen/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
-
-import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
 void main() async {
   try {
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp(
-      options: FirebaseOptions(
+      options: const FirebaseOptions(
         apiKey: "AIzaSyApAPzK9BVe67444gsXzRNs4jlJEX5Sn4s",
         appId:
             "754983928283-kf6u7k8od65u0q47fv20lfcdjuibklbg.apps.googleusercontent.com",
@@ -27,7 +25,7 @@ void main() async {
   //   messagingSenderId: "",
   //   projectId: "ecommerceapp-a27db",
   // ));
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -40,7 +38,7 @@ class MyApp extends StatelessWidget {
       title: appname,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.transparent,
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           iconTheme: IconThemeData(
             color: darkFontGrey,
           ),
@@ -49,7 +47,7 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: regular,
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

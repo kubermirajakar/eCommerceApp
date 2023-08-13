@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   5.heightBox,
                   controller.isLoading.value
-                      ? CircularProgressIndicator(
+                      ? const CircularProgressIndicator(
                           valueColor: AlwaysStoppedAnimation(redColor),
                         )
                       : commonButton(
@@ -90,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   commonButton(
                     color: lightGolden,
                     onPress: () {
-                      Get.to(() => SignUpScreen());
+                      Get.to(() => const SignUpScreen());
                     },
                     textColor: redColor,
                     title: signUp,
@@ -122,7 +122,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   .rounded
                   .white
                   .padding(
-                    EdgeInsets.all(16),
+                    const EdgeInsets.all(16),
                   )
                   .width(context.screenWidth - 70)
                   .shadowSm

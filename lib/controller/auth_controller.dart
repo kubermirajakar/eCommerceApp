@@ -16,7 +16,12 @@ class AuthController extends GetxController {
       userCredential = await auth.signInWithEmailAndPassword(
           email: emailController.text, password: passwordController.text);
     } on FirebaseAuthException catch (e) {
-      VxToast.show(context, msg: e.toString());
+      VxToast.show(
+        context,
+        bgColor: redColor,
+        textColor: whiteColor,
+        msg: "User not found !!!",
+      );
     }
 
     return userCredential;
@@ -45,7 +50,7 @@ class AuthController extends GetxController {
       "imageUrl": "",
       "id": currentUser!.uid,
       "cart_count": "00",
-      "oder_count": "00",
+      "order_count": "00",
       "wishlist_count": "00",
     });
   }

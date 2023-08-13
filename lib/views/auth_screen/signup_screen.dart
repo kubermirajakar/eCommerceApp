@@ -86,7 +86,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       5.widthBox,
                       Expanded(
                         child: RichText(
-                          text: TextSpan(
+                          text: const TextSpan(
                             children: [
                               TextSpan(
                                 text: "I agree to the ",
@@ -124,7 +124,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   10.heightBox,
                   controller.isLoading.value
-                      ? CircularProgressIndicator(
+                      ? const CircularProgressIndicator(
                           valueColor: AlwaysStoppedAnimation(redColor),
                         )
                       : commonButton(
@@ -202,7 +202,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   .rounded
                   .white
                   .padding(
-                    EdgeInsets.all(16),
+                    const EdgeInsets.all(16),
                   )
                   .width(context.screenWidth - 70)
                   .shadowSm
