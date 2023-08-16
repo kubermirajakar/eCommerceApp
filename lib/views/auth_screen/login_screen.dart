@@ -6,6 +6,7 @@ import 'package:ecommerceapp/views/auth_screen/signup_screen.dart';
 import 'package:ecommerceapp/views/home_screen/home.dart';
 import 'package:ecommerceapp/widgets_common/applogo_widget.dart';
 import 'package:ecommerceapp/widgets_common/background_widget.dart';
+import 'package:ecommerceapp/widgets_common/circularIndicator.dart';
 import 'package:ecommerceapp/widgets_common/common_button.dart';
 import 'package:ecommerceapp/widgets_common/custom_textfield.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -58,9 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   5.heightBox,
                   controller.isLoading.value
-                      ? const CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation(redColor),
-                        )
+                      ? circularIndicator()
                       : commonButton(
                           color: redColor,
                           onPress: () async {

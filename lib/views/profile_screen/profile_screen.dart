@@ -8,11 +8,17 @@ import 'package:ecommerceapp/views/auth_screen/login_screen.dart';
 import 'package:ecommerceapp/views/profile_screen/components/profile_card.dart';
 import 'package:ecommerceapp/views/profile_screen/profile_edit_screen.dart';
 import 'package:ecommerceapp/widgets_common/background_widget.dart';
+import 'package:ecommerceapp/widgets_common/circularIndicator.dart';
 import 'package:get/get.dart';
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+class ProfileScreen extends StatefulWidget {
+  ProfileScreen({Key? key}) : super(key: key);
 
+  @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     var controller = Get.put(ProfileController());
@@ -26,14 +32,12 @@ class ProfileScreen extends StatelessWidget {
           builder:
               (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if (!snapshot.hasData) {
-              return const Center(
-                child: CircularProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation(redColor),
-                ),
+              return Center(
+                child: circularIndicator(),
               );
             } else {
               var data = snapshot.data!.docs[0];
-              // print(data['order_count']);
+              print(data['imageUrl']);
 
               return SafeArea(
                 child: Column(
@@ -47,8 +51,10 @@ class ProfileScreen extends StatelessWidget {
                           color: whiteColor,
                         ),
                       ).onTap(() {
+                        controller.nameController.text = data['name'];
+
                         Get.to(
-                          () => const ProfileEditScreen(),
+                          () => ProfileEditScreen(data: data),
                         );
                       }),
                     ),
@@ -56,11 +62,19 @@ class ProfileScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Row(
                         children: [
-                          Image.asset(
-                            imgProfile2,
-                            width: 100,
-                            fit: BoxFit.cover,
-                          ).box.roundedFull.clip(Clip.antiAlias).make(),
+                          data['imageUrl'] == ""
+                              ? Image.asset(
+                                  imgProfile2,
+                                  width: 100,
+                                  height: 100,
+                                  fit: BoxFit.cover,
+                                ).box.roundedFull.clip(Clip.antiAlias).make()
+                              : Image.network(
+                                  data['imageUrl'],
+                                  width: 100,
+                                  height: 100,
+                                  fit: BoxFit.cover,
+                                ).box.roundedFull.clip(Clip.antiAlias).make(),
                           10.widthBox,
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

@@ -3,6 +3,7 @@ import 'package:ecommerceapp/controller/auth_controller.dart';
 import 'package:ecommerceapp/views/home_screen/home.dart';
 import 'package:ecommerceapp/widgets_common/applogo_widget.dart';
 import 'package:ecommerceapp/widgets_common/background_widget.dart';
+import 'package:ecommerceapp/widgets_common/circularIndicator.dart';
 import 'package:ecommerceapp/widgets_common/common_button.dart';
 import 'package:ecommerceapp/widgets_common/custom_textfield.dart';
 import 'package:get/get.dart';
@@ -124,9 +125,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   10.heightBox,
                   controller.isLoading.value
-                      ? const CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation(redColor),
-                        )
+                      ? circularIndicator()
                       : commonButton(
                               color: isCheck == true ? redColor : lightGrey,
                               onPress: () async {

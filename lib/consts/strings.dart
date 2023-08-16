@@ -19,6 +19,8 @@ const alreadyHaveAccount = "Already have an account? ";
 const logout = "Logout";
 const loggedIn = "Logged in successfully!";
 const loggedOut = "Logged out successfully!";
+const oldPassword = "Old password";
+const newPassword = "New password";
 
 //home strings
 const home = "Home",
