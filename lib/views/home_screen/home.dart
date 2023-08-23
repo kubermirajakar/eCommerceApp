@@ -13,6 +13,9 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(Colors.red.value);
+    print(Colors.green.value);
+    print(Colors.black.value);
     var navBarItem = [
       BottomNavigationBarItem(
           icon: Image.asset(
