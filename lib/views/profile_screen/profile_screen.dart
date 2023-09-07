@@ -37,7 +37,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
               );
             } else {
               var data = snapshot.data!.docs[0];
-              print(data['imageUrl']);
 
               return SafeArea(
                 child: Column(

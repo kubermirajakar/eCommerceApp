@@ -20,6 +20,7 @@ class CategoriesScreen extends StatelessWidget {
         body: Container(
           padding: const EdgeInsets.all(8),
           child: GridView.builder(
+              physics: const BouncingScrollPhysics(),
               shrinkWrap: true,
               itemCount: 9,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

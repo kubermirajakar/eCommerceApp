@@ -94,32 +94,31 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                               controller.isLoading(true);
                               try {
                                 controller.uploadProfileImage();
-                                print(controller.profileImageLink);
-                              } catch (e) {
-                                print(e);
-                              }
-                              if (widget.data['password'] ==
-                                  controller.oldPasswordController.text) {
-                                await controller.changeAuthPassword(
-                                  email: widget.data['email'],
-                                  password:
-                                      controller.oldPasswordController.text,
-                                  newPassword:
-                                      controller.newPasswordController.text,
-                                );
 
-                                await controller.updateProfile(
-                                  imageUrl: controller.profileImageLink,
-                                  name: controller.nameController.text,
-                                  password:
-                                      controller.newPasswordController.text,
-                                );
-                                VxToast.show(context, msg: 'Updated');
-                              } else {
-                                VxToast.show(context,
-                                    msg: 'Old password is wrong');
-                                controller.isLoading(false);
-                              }
+                                if (widget.data['password'] ==
+                                    controller.oldPasswordController.text) {
+                                  await controller.changeAuthPassword(
+                                    email: widget.data['email'],
+                                    password:
+                                        controller.oldPasswordController.text,
+                                    newPassword:
+                                        controller.newPasswordController.text,
+                                  );
+
+                                  await controller.updateProfile(
+                                    imageUrl: controller.profileImageLink,
+                                    name: controller.nameController.text,
+                                    password:
+                                        controller.newPasswordController.text,
+                                  );
+
+                                  VxToast.show(context, msg: 'Updated');
+                                } else {
+                                  VxToast.show(context,
+                                      msg: 'Old password is wrong');
+                                  controller.isLoading(false);
+                                }
+                              } catch (e) {}
                             },
                             textColor: whiteColor,
                             title: "Save",

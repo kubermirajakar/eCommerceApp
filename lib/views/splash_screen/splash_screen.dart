@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   changeScreen() {
     Future.delayed(
       const Duration(
-        seconds: 1,
+        seconds: 2,
       ),
       () {
         auth.authStateChanges().listen((User? currentUser) {

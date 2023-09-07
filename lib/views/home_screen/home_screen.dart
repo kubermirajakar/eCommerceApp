@@ -49,10 +49,11 @@ class HomeScreen extends StatelessWidget {
                     VxSwiper.builder(
                       aspectRatio: 16 / 9,
                       autoPlay: true,
+                      scrollPhysics: const BouncingScrollPhysics(),
                       height: 100,
                       enlargeCenterPage: true,
                       itemCount: sliderList.length,
-                      itemBuilder: (contex, index) => Image.asset(
+                      itemBuilder: (context, index) => Image.asset(
                         sliderList[index],
                         fit: BoxFit.fill,
                       )
@@ -82,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                       height: 100,
                       enlargeCenterPage: true,
                       itemCount: secondSliderLit.length,
-                      itemBuilder: (contex, index) => Image.asset(
+                      itemBuilder: (context, index) => Image.asset(
                         secondSliderLit[index],
                         fit: BoxFit.fill,
                       )

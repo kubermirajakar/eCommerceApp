@@ -1,10 +1,11 @@
 import 'package:ecommerceapp/consts/consts.dart';
 
-Widget customTextfield(
-    {String? title,
-    String? hint,
-    TextEditingController? controller,
-    bool? isPass}) {
+Widget customTextfield({
+  String? title,
+  String? hint,
+  TextEditingController? controller,
+  bool? isPass,
+}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [

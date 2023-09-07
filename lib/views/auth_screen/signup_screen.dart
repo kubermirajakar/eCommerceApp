@@ -64,13 +64,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     title: reTypePassword,
                     hint: passwordHint,
                   ),
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: forgetPassword.text.make(),
-                    ),
-                  ),
+                  // Align(
+                  //   alignment: Alignment.bottomRight,
+                  //   child: TextButton(
+                  //     onPressed: () {},
+                  //     child: forgetPassword.text.make(),
+                  //   ),
+                  // ),
                   5.heightBox,
                   Row(
                     children: [
@@ -152,8 +152,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     });
                                   } catch (e) {
                                     auth.signOut();
-                                    VxToast.show(context, msg: e.toString());
-                                    controller.isLoading(false);
+                                    if (nameController.text.isEmpty ||
+                                        passwordController.text.isEmpty ||
+                                        passwordController.text.isEmpty ||
+                                        passwordRetypeController.text.isEmpty) {
+                                      VxToast.show(context,
+                                          msg: "Enter all the mandatory fields",
+                                          bgColor: redColor,
+                                          textColor: whiteColor);
+                                      controller.isLoading(false);
+                                    } else {
+                                      VxToast.show(context, msg: e.toString());
+                                      controller.isLoading(false);
+                                    }
                                   }
                                 }
                               },
