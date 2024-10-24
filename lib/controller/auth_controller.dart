@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 
 class AuthController extends GetxController {
   var isLoading = false.obs;
+  var demo = "hello";
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
 
